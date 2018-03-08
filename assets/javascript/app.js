@@ -41,7 +41,7 @@ $(document).ready(function () {
         function triviaQuestions() {
             questionArray = [{
             question: "1. Which is the capital of Australia?",
-            answers: ["Canberra", "Sydney", "Melbourne", "Perth"],
+            answers: ("Canberra", "Sydney", "Melbourne", "Perth"),
             correctAnswer: 0
         },
         {
@@ -67,7 +67,7 @@ $(document).ready(function () {
         ]
 
         $("#question0").html(questionArray[0].question);
-        $("#answers").html(questionArray[0].answers);
+        $("answers").html(questionArray.answers);
         $("#question1").html(questionArray[1].question);
         // $("#answers").html(questionArray[1].answers);
         $("#question2").html(questionArray[2].question);

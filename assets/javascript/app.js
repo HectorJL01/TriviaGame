@@ -6,23 +6,22 @@ $(document).ready(function () {
         $(questionArray).show();
         
     })
-
-    var yourScore = 0;
+    var youreScore = 0;
+    var userselection = [];
+    var correctAnswer = [];
     var wins = 0;
     var losses = 0;
-    var userselection = []
-    var question = "";
     var questionArray= [];
     
     var clock = {
-        time:5,
+        time:30,
         count:function(){
             clock.time--;
             $("#time").html("You have "+ clock.time + " seconds to complete this test");
             if (clock.time==0){
                clearInterval(counter);
-               clock.time=5;
-               clock.reset();
+            //    clock.time=30;
+            //    clock.reset();
 
             };
         },
@@ -39,10 +38,10 @@ $(document).ready(function () {
 
          clock.start();
 
-    function triviaQuestions() {
-        questionArray = [{
+        function triviaQuestions() {
+            questionArray = [{
             question: "1. Which is the capital of Australia?",
-            button: ["Canberra", "Sydney", "Melbourne", "Perth"],
+            answers: ["Canberra", "Sydney", "Melbourne", "Perth"],
             correctAnswer: 0
         },
         {
@@ -70,45 +69,28 @@ $(document).ready(function () {
         $("#question0").html(questionArray[0].question);
         $("#answers").html(questionArray[0].answers);
         $("#question1").html(questionArray[1].question);
+        // $("#answers").html(questionArray[1].answers);
         $("#question2").html(questionArray[2].question);
+        // $("#answers").html(questionArray[2].answers);
         $("#question3").html(questionArray[3].question);
+        // $("#answers").html(questionArray[3].answers);
         $("#question4").html(questionArray[4].question);
+        // $("#answers").html(questionArray[0].answers);
 
-        // function getAnswer() {
 
-        //         $('userselection').on('click', function() {
-        //           console.log('alert', index);
-        //             index++;
-        //             console.log('click', index);
-        //             $(".question").text('');
-        //             $("#buttonA").text('');
-        //             $("#buttonB").text('');
-        //             $("#buttonC").text('');
-        //             $("#buttonD").text('');
-        //             loadQuestion();
-        //         })
-        //     }
-            
-        //     function answerCorrect() {
-        //         correct++;
-        //         alert("Correct!");
-        //         console.log("correct");
-        //     }
-            
-        //     function answerWrong() {
-        //         wrong++;
-        //         alert("Incorrect!");
-        //         console.log("wrong");
-        //     }
-            
-        //     function showScore() {
-        //         $('.question').empty();
-        //         $('.question').append("<h2><p>" + correct + " correct</p></h2>");
-        //         $('.question').append("<h2><p>" + wrong + " incorrect</p></h2>");
-        //         countdownTimer.stop();
-        //         $('.timer').empty();
-            
-        //     }
+        function correct (){
+            if (userselection === correctAnswer)
+            wins ++;
+            $('#wins').text(wins);
+            $(correctAnswer).show()
+
+        }
+        function incorrect (){
+            if (userselection === incorrect)
+            losses ++;
+            $('#losses').text(losses);
+
+        }
 
     };
 

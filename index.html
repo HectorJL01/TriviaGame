@@ -21,16 +21,20 @@
         <div class="triviagame" id="title">Trivia Time
         <div id="instructions">Instructions
             <ol>
-                <li>The player will have a limited amount of time to finish the quiz.</li>
-                <li>trivia form with multiple choice or true/false options</li>
-                <li>The game ends when the time runs out. The page will reveal the number of questions that players answer correctly
+                <li>The player will have a 30ss to answer all the questions.</li>
+                <li>Each question has multiple options. </li>
+                <li>You can only select one option per question.</li>
+                <li>The game ends when the time runs out.</li> 
+                <li>The page will reveal the number of questions that players answer correctly
                     and incorrectly.</li>
                 <li>HAVE FUN</li>
             </ol>
         </div>
         <button class="game" id="start">Start</button>
     <div id="container">
+            <p>
         <div class="timer" id="time">Time:</div>
+            </p>
         <div class="trivias" id="questions">
         <div>
             <span id="question0"></span>
@@ -43,7 +47,7 @@
             
                 <input type="radio" id="answers" value="2" class="f">
                 
-                <input type="radio" id="answers" value="3" class="f">        
+                <!-- <input type="radio" id="answers" value="3" class="f">         -->
                </p>
             </div>
         </div>
@@ -51,38 +55,38 @@
             <p>
             <div id="question">
             
-        <input type="radio" id="answer" value="0" class="t">
+        <input type="radio" id="answers" value="0" class="t">
      
-        <input type="radio" id="answer" value="1" class="f">
+        <input type="radio" id="answers" value="1" class="f">
      
-        <input type="radio" id="answer" value="2" class="f">
+        <input type="radio" id="answers" value="2" class="f">
   
-        <input type="radio" id="answer" value="3" class="f">
+        <input type="radio" id="answers" value="3" class="f">
             </p>
         </div>
             <span id="question2"></span>
             <p>
             <div id="question2">
             
-        <input type="radio" id="answer" value="0" class="t">
+        <input type="radio" id="answers" value="0" class="t">
      
-        <input type="radio" id="answer" value="1" class="f">
+        <input type="radio" id="answers" value="1" class="f">
 
-        <input type="radio" id="answer" value="2" class="f">
+        <input type="radio" id="answers" value="2" class="f">
       
-        <input type="radio" id="answer" value="3" class="f">
+        <input type="radio" id="answers" value="3" class="f">
             </p>
         </div>
             <span id="question3"></span>
             <p>
         <div id="question3">
-        <input type="radio" id="answer" value="0" class="t">
+        <input type="radio" id="answers" value="0" class="t">
     
-        <input type="radio" id="answer" value="1" class="f">
+        <input type="radio" id="answers" value="1" class="f">
     
-        <input type="radio" id="answer" value="2" class="f">
+        <input type="radio" id="answers" value="2" class="f">
     
-        <input type="radio" id="answer" value="3" class="f">
+        <input type="radio" id="answers" value="3" class="f">
            </p>
         </div>
         </div>
@@ -90,16 +94,19 @@
             <p>
         <div id="question4">
             
-        <input type="radio" id="answer0" value="0" class="t">
+        <input type="radio" id="answers" value="0" class="t">
      
-        <input type="radio" id="answer1" value="1" class="f">
+        <input type="radio" id="answers" value="1" class="f">
      
-        <input type="radio" id="answer2" value="2" class="f">
+        <input type="radio" id="answers" value="2" class="f">
       
-        <input type="radio" id="answer3" value="3" class="f">
+        <input type="radio" id="answers" value="3" class="f">
            </p>
         </div>
-        <div id="yourScore">Score:(aparece al final, lo esamos viendo por cuestion de posicionamiento)</div>
+        <div class="yourScore">
+                <h>Your total score is: </h>
+                <div id="score"> </div>
+        </div>
         
     </div>
 
